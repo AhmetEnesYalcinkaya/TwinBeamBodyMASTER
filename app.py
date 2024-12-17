@@ -33,6 +33,14 @@ st.set_page_config(
     menu_items={"Get Help": None, "Report a Bug": None, "About": None}
 )
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 # Logo Placement
 logo_path = "logo.jpg"  # Logo uploaded by user
 if os.path.exists(logo_path):
