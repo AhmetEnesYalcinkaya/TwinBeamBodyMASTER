@@ -25,7 +25,13 @@ def predict_and_save(uploaded_image):
         raise FileNotFoundError("Prediction folder not found.")
 
 # Streamlit UI Setup
-st.set_page_config(page_title="Spiral Technology", layout="wide")
+st.set_page_config(
+    page_title="Spiral Technology",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    page_icon="🔍",
+    menu_items={"Get Help": None, "Report a Bug": None, "About": None}
+)
 
 # Logo Placement
 logo_path = "logo.jpg"  # Logo uploaded by user
